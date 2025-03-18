@@ -1,0 +1,57 @@
+/* Center the entire container */
+.quiz-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    color: #c8c8c8;
+  }
+  
+  /* Animated Title */
+  .quiz-title {
+    font-size: 60px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+  }
+  
+  .quiz-title span {
+    display: inline-block;
+    transform: translateY(0);
+    animation: floatAnimation 1.5s infinite ease-in-out;
+  }
+  
+  .quiz-title span:nth-child(1) { animation-delay: 0s; }
+  .quiz-title span:nth-child(2) { animation-delay: 0.1s; }
+  .quiz-title span:nth-child(3) { animation-delay: 0.2s; }
+  .quiz-title span:nth-child(4) { animation-delay: 0.3s; }
+  .quiz-title span:nth-child(5) { animation-delay: 0.4s; }
+  .quiz-title span:nth-child(6) { animation-delay: 0.5s; }
+  .quiz-title span:nth-child(7) { animation-delay: 0.6s; }
+  .quiz-title span:nth-child(8) { animation-delay: 0.7s; }
+  .quiz-title span:nth-child(9) { animation-delay: 0.8s; }
+  .quiz-title span:nth-child(10) { animation-delay: 0.9s; }
+
+  
+  /* Floating Animation */
+  @keyframes floatAnimation {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Quote Styling */
+  .quiz-quote {
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+  

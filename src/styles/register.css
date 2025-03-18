@@ -1,0 +1,55 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    font-family: "Poppins", sans-serif;
+    color: #c8c8c8;
+  }
+  
+  .register-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  h2 {
+    font-family: "Playfair Display", serif;
+    margin-bottom: 1rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: #c8c8c8;
+  }
+  
+  button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #c8c8c8;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #999;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 1rem;
+  }
+  
