@@ -7,6 +7,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [role, setRole] = useState("user"); // Default role is 'user'
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -23,7 +24,7 @@ const Register = () => {
       const response = await fetch("http://localhost:5049/api/users/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ name, email, password, role }), // Send the role to backend
       });
 
       const data = await response.json();
@@ -72,6 +73,13 @@ const Register = () => {
           onChange={(e) => setConfirmPassword(e.target.value)}
           required
         />
+        <div>
+          <label>Role:</label>
+          <select value={role} onChange={(e) => setRole(e.target.value)} required>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
         <button type="submit">Register</button>
       </form>
     </div>

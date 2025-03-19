@@ -1,0 +1,76 @@
+.problem-page {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #0e0e0e; /* Dark theme */
+    color: #c8c8c8;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Centered Quiz Container */
+.quiz-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increased min width */
+    gap: 25px; /* Increased gap between cards */
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.quiz-card {
+    background: #2a2a2a; /* Slightly lighter background */
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    width: 350px; /* Increased width */
+    height: auto; /* Allow height to adjust */
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Add spacing between elements */
+.quiz-card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Space below title */
+}
+
+.quiz-description {
+    font-size: 16px;
+    font-style: italic;
+    opacity: 0.8;
+    margin-bottom: 10px; /* Space below description */
+}
+
+.quiz-questions {
+    font-weight: bold;
+    margin-bottom: 15px; /* Space below question count */
+}
+
+/* Button Styling */
+.quiz-button {
+    background-color: #c8c8c8;
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: auto; /* Push button to bottom */
+}
+
+.quiz-button:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}

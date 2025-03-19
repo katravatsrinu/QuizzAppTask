@@ -1,89 +1,118 @@
-/* Navbar Styles */
+/* General Navbar Styles */
 .navbar {
-    background-color: #000;
-    color: #c8c8c8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  .nav-container {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-container {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
-  }
-  
-  .logo {
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
     font-size: 24px;
     font-weight: bold;
-  }
-  
-  /* Hamburger Icon */
-  .menu-icon {
-    display: none;
-    font-size: 26px;
-    cursor: pointer;
-    color: #c8c8c8;
-  }
-  
-  /* Navigation Links */
-  .nav-links {
-    display: flex;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Navigation Links */
+.nav-links {
     list-style: none;
+    display: flex;
     gap: 20px;
-  }
-  
-  .nav-links li {
-    display: inline-block;
-  }
-  
-  .nav-links a,
-  .logout-btn {
-    text-decoration: none;
-    color: #c8c8c8;
-    font-size: 18px;
+}
+
+.nav-links li {
     cursor: pointer;
-    background: none;
-    border: none;
-    padding: 5px 10px;
-  }
-  
-  .logout-btn:hover {
-    color: red;
-  }
-  
-  /* Responsive - Mobile View */
-  @media screen and (max-width: 768px) {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+/* Links and Hover Effect */
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.nav-links li:hover, .nav-links a:hover {
+    color: #007bff; /* Highlight effect */
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    color: var(--text-color);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: #007bff;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
     .menu-icon {
-      display: block; /* Show menu icon on small screens */
+        display: block;
     }
-  
+
     .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background: #222;
-      padding: 10px;
-      border-radius: 5px;
-      width: 180px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: var(--bg-color);
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 200px;
     }
-  
+
     .nav-links.open {
-      display: flex; /* Show when menu icon is clicked */
+        display: flex;
     }
-  
-    .nav-links li {
-      padding: 10px;
-      text-align: center;
-    }
-  }
-  
+}
+
+/* Dark & Light Theme Variables */
+:root {
+    --bg-color: #151515;
+    --text-color: #c8c8c8;
+}
+
+[data-theme="light"] {
+    --bg-color: #ffffff;  /* Pure white background */
+    --text-color: #000000; /* Pure black text for high contrast */
+}
+
+/* Ensure contrast is maintained in open mobile menu */
+.nav-links.open {
+    background: var(--bg-color);
+    color: var(--text-color);
+}

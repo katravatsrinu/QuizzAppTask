@@ -1,0 +1,133 @@
+/* Ensure content is visible below the navbar */
+.quiz-page {
+    padding-top: 80px;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #000000; /* Dark background */
+    color: #c8c8c8; /* Light text */
+}
+
+/* Quiz Title */
+.quiz-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Question List */
+.question-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Individual Question */
+.question-item {
+    background-color: #222;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+/* Answer List */
+.answer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.answer-item {
+    display: flex;
+    align-items: flex-start; /* Ensures alignment with the first line */
+    gap: 10px; 
+    margin: 5px 0;
+}
+
+/* Answer Label */
+.answer-label {
+    display: flex;
+    align-items: flex-start; 
+    gap: 10px; 
+    cursor: pointer;
+    line-height: 1.4;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Ensure the answer text wraps properly */
+.answer-text {
+    display: flex;
+    flex-direction: column;
+    word-break: break-word;
+    width: 100%;
+}
+
+/* Radio Button */
+.answer-label input[type="radio"] {
+    margin-top: 5px; /* Adjust alignment */
+    flex-shrink: 0; /* Prevents resizing */
+    transform: scale(1.2);
+    accent-color: #00ff00;
+    position: relative;
+    top: 4px; /* Slight push down to match text */
+}
+
+/* Option number (A, B, C, D) */
+.option-number {
+    font-weight: bold;
+    min-width: 20px;
+    text-align: right;
+}
+
+/* Save Answer Button */
+.save-answer-btn {
+    background-color: #444;
+    color: #c8c8c8;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.save-answer-btn:hover {
+    background-color: #666;
+}
+
+/* Submit Button - Reduced width */
+.submit-btn {
+    display: block;
+    background-color: #444;
+    color: #c8c8c8;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 200px;  /* Set a fixed width */
+    text-align: center;
+}
+
+.submit-btn:hover {
+    background-color: #666;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+

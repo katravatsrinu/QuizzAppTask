@@ -1,21 +1,32 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #000; /* Your theme color */
-    color: #c8c8c8;
-    font-family: "Poppins", sans-serif;
-    min-height: 100vh;
-  }
-  
-  .navbar {
-    margin-bottom: 0; /* Remove space below navbar */
-  }
-  
-  .home-container {
-    padding-top: 0; /* Remove extra top padding */
-  }
-  
+/* Default Dark Mode */
+body.dark {
+  background-color: #000000;
+  color: #c8c8c8;
+}
+
+/* Light Mode */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #222;
+  padding: 10px;
+}
+
+body.light .navbar {
+  background-color: #f8f8f8;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  cursor: pointer;
+  color: #ffcc00;
+  transition: color 0.3s;
+}
+
+body.light .theme-toggle {
+  color: #333;
+}
