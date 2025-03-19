@@ -13,7 +13,7 @@ const QuizPage = () => {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost:5049/api/quizzes/${quizId}/questions`)
+    axios.get(`https://quiz-backend-2-fjbn.onrender.com/api/quizzes/${quizId}/questions`)
       .then(response => {
         console.log("Full API Response:", response.data);
         if (Array.isArray(response.data)) {
@@ -62,7 +62,7 @@ const QuizPage = () => {
         score: totalScore,
       });
 
-      await axios.post("http://localhost:5049/api/scores", {
+      await axios.post("https://quiz-backend-2-fjbn.onrender.com/api/scores", {
         userId: parseInt(userId),
         quizId: parseInt(quizId),
         score: totalScore,

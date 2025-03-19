@@ -21,7 +21,7 @@ const Register = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5049/api/users/register", {
+      const response = await fetch("https://quiz-backend-2-fjbn.onrender.com/api/users/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password, role }), // Send the role to backend

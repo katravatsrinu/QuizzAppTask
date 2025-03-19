@@ -17,7 +17,7 @@ const ProblemPage = () => {
   const navigate = useNavigate(); 
 
   useEffect(() => {
-    axios.get("http://localhost:5049/api/quizzes")
+    axios.get("https://quiz-backend-2-fjbn.onrender.com/api/quizzes")
       .then(response => {
         console.log("Fetched Quizzes:", response.data);
         setQuizzes(response.data);
