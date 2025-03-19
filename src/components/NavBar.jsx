@@ -62,7 +62,6 @@ const Navbar = () => {
 
           {isAuthenticated && userRole === "admin" && (
             <>
-              <li><Link to="/profile">Profile</Link></li>
               <li><Link to="/leaderboard">Leaderboard</Link></li> {/* Leaderboard option for admin */}
             </>
           )}

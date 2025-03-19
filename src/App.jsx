@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Signup";
 import ProblemPage from "./pages/ProblemPage";
 import QuizPage from "./pages/QuizPage";
+import Leaderboard from "./components/Leaderboard";  // Import Leaderboard Component
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/quizzes" element={<ProblemPage />} />
           <Route path="/quiz/:quizId" element={<QuizPage />} />
+          <Route path="/leaderboard" element={<Leaderboard />} /> {/* Leaderboard Route */}
         </Routes>
       </Router>
     </ThemeProvider>
